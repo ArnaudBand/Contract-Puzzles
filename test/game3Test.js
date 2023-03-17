@@ -28,9 +28,9 @@ describe('Game3', function () {
     // you'll need to update the `balances` mapping to win this stage
 
     // to call a contract as a signer you can use contract.connect
-    await game.connect(signer).buy({ value: '10' });
-    await game.connect(signer1).buy({ value: '20' });
-    await game.connect(signer2).buy({ value: '5' });
+    await game.connect(signer).buy({ value: '100' });
+    await game.connect(signer1).buy({ value: '200' });
+    await game.connect(signer2).buy({ value: '50' });
 
     // TODO: win expects three arguments
     await game.win(signer.getAddress(), signer1.getAddress(), signer2.getAddress());
