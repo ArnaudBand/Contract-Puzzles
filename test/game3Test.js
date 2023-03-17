@@ -33,7 +33,7 @@ describe('Game3', function () {
     await game.connect(signer2).buy({ value: '50' });
 
     // TODO: win expects three arguments
-    await game.win(signer.getAddress(), signer1.getAddress(), signer2.getAddress());
+    await game.win(address, address1, address2);
 
     // leave this assertion as-is
     assert(await game.isWon(), 'You did not win the game');
